@@ -1,0 +1,16 @@
+body {
+    background-color: #111;
+}
+
+.all_films {
+    text-align: center;
+}
+
+.img-fluid {
+    width: 70%;
+    height: 90%;
+}
+
+.col-md-4 {
+    margin-top: 20px;
+}
