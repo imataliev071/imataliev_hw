@@ -1,24 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
+{%include 'tv/header.html'%}
+<style>
+    body{
+        background-color: aqua;
+    }
+</style>
 <h1>Все машины</h1>
 <ul>
     {% for i in cars%}
     <li>
         <h2>{{i.cars_name}}</h2>
-        <img src="{{i.cars_image.url}}" alt="">
+        <img src="{{i.cars_image.url}}" alt="" width="50%">
         <p>{{i.cars_price}}</p>
         <p>{{i.cars_description}}</p>
         <p>{{i.cars_creation_date}}</p>
     </li>
     {% endfor %}
 </ul>
-
-
-</body>
-</html>
+{%include 'tv/footer.html'%}

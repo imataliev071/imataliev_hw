@@ -1,0 +1,8 @@
+{% include 'tv/header.html' %}
+<h1>Добавить фильм</h1>
+<form action="/tv_shows_create/" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form.as_p}}
+    <button type="submit">Добавить</button>
+</form>
+{% include 'tv/footer.html' %}

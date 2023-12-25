@@ -1,0 +1,11 @@
+{% include 'tv/header.html' %}
+<ul>
+<h1>Выберите для изменения</h1>
+    {% for i in tv_shows_update %}
+    <li>
+        <h2>{{i.title}}</h2>
+        <button><a href="/tv_shows_update/{{i.id}}/update/">Изменить</a></button>
+    </li>
+    {% endfor %}
+</ul>
+{% include 'tv/footer.html' %}

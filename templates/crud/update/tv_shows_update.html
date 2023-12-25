@@ -1,0 +1,9 @@
+{% include 'tv/header.html' %}
+<h1>Выберите объект для изменения</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Изменить</button>
+
+</form>
+{% include 'tv/footer.html' %}
