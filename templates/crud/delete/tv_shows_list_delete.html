@@ -1,7 +1,7 @@
 {% include 'tv/header.html' %}
 <ul>
 <h1>Выберите для удаления</h1>
-    {% for i in tv_shows_delite %}
+    {% for i in tv_shows_delete %}
     <li>
         <h2>{{i.title}}</h2>
         <button><a href="/tv_shows_drop/{{i.id}}/delete/">Удалить</a></button>

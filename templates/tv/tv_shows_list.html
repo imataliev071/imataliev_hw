@@ -2,20 +2,40 @@
 {% include 'tv/header.html' %}
 <style>
     .all_films {
-        background-color: #abcdef; /* Замените на цвет или изображение, которое вы хотите использовать */
+        /* Замените на цвет или изображение, которое вы хотите использовать */
         padding: 20px; /* Добавьте отступы по вашему усмотрению */
+        text-align: center;
     }
+
+    body {
+        background:linear-gradient(rgba(1, 10, 1, 0.9), rgba(0, 0, 0, 0.2)), url(https://kartinki.pics/uploads/posts/2021-07/1625842757_17-kartinkin-com-p-nochnaya-pustinya-oboi-krasivie-20.jpg) no-repeat;
+        /*background-size: cover ;*/
+        background-attachment: fixed;
+        margin: 0px;
+        height: 200vh;
+        background-size: cover;
+    }
+
+    .img-fluid {
+        height: 90%;
+    }
+
+    h2, h1 {
+        color: white;
+    }
+
+
 
 </style>
 <!-- Область с фильмами -->
 <div class="all_films">
     <h1>Список фильмов</h1>
     <div class="row">
-        {% for i in tv_shows %}
+        {% for i in object_list %}
         <div class="col-md-4 mb-4">
             <h2>{{ i.title }}</h2>
             <a href="/film_list/{{ i.id }}/">
-                <img src="{{ i.image.url }}" class="img-fluid" alt="{{ i.title }}">
+                <img src="{{ i.image.url }}" width="70%" class="img-fluid" alt="{{ i.title }}">
             </a>
         </div>
         {% if forloop.counter|divisibleby:3 and not forloop.last %}
