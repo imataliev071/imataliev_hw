@@ -9,6 +9,7 @@ urlpatterns = [
     path('', include('tv_shows.urls')),
     path('', include('parser_app.urls')),
     path('', include('custom_user.urls')),
+    path('', include('cloth.urls')),
 ]
 
 
